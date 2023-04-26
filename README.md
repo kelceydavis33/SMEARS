@@ -26,11 +26,13 @@ I mentioned that the data I work with is an output for something called FHD. Thi
 
 ![github1](https://user-images.githubusercontent.com/47015033/234695090-f1e8fb5c-3cf9-44a7-a07a-3d1f97d51345.png) 
 
+That single black star in the center os how previous code would model this source. You don't need to be a radio astronomer to tell that this is a poor representation of the source. 
+
 The goal is to turn these individual point arrays into something that looks like the sources so we can subtract it from the data and calibrate asound it. I'll talk you through the modeling algorithm next which takes those point arrays and turns them in to a model that looks like this:
 
 ![sourceJ004733-251710medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234695634-81f0d1b3-47ab-4f28-b741-24e07ebc3e1d.png)
 
-Wow so pretty. But how did I do it? First we need to consider the observations individualy. 
+Wow so pretty. But how did I do it? First we need to consider the observations individualy. As you can see from the model I showed, a lot of these sources really do have some point-like portion to them. In this example, it is a very bright spot right in the center of the object. These are (almost always) bright, active black holes at the center of galaxies, or even just very bright black holed spewing out radiation. We need to find somewhere between an aproach that just gives up and treats the source as point-like and an aproach that washes out a really point-like portion of the source.
 
 
 ## Usage
