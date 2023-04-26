@@ -48,6 +48,38 @@ Next, we need to commbine the individual observations together to make a final m
 
 You can see that each of them vary a whole lot between observations. You may have already learned that by staring at the first plot. This is primarily due to the ionosphere layer of the Earth's atmosphere. This layer has a lot of bubling and activity that interferes with radio wavelength data and jumbles observations. The best way around this is to take data on the far side of the moon. That's outside the scope of this project, so we are forced to come up with other solutions. The most effective way to combat this is to combine as many images for a sources as possible. We then overlay all these images on top of each other and take a median value for each pixel in the image. This gets rid of fluctuations that occured just on one imaage and keeps areas of the source that are consistently bright across observatiosn. After this, we finally arive at the image I showed. 
 
+This work needs some final resolving things. The code is built so that it can be run on several sources at once and generate sky catalogs that can be used in calibration. Calibrating the data is fairly intensive, so it has only been tested once. I simply replaced one source with my updated model and looked at how this changed the quality of the image. 
+
+![githubim2](https://user-images.githubusercontent.com/47015033/234703313-f810edf7-75ee-4eee-ba84-28c04143d2b5.png)
+
+The left pannel here is the original observation with the previous calibration catalogs applied. There is something going on at the center of a cross you can make out. This distortion at the center is what happens when calibration fails. Essentially, it is punching a hole in the image. Errors like this propogate through the observation, and a few other artifacts pop up. In the escond image, I just replaced the source at the center of this cross with my updated model for it. You can see the the cross is a lot less prevalent and faint lines that are extending out from the source in the original image are mitigated. This shows me that the improved model has a lot of potential for image quality improvement.
+
+As it stands, I have not worked on this code for quite some time. I have seen a lot of the low-frequency radio sky and that has been exciting. I'll include here some fun objects that I have found, most of which are not identified in any other catalogs I have found. I have sky maps of more sources than I could ever hope to include here and nothing to do with them. If you have any interest in the low frequency radio sky in the southern hemisphere, I am happy to share them. Here are some of the prettier things I have seen in my modeling searches.
+
+
+![sourceJ025738+060352medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234704504-5c1175e6-826f-43b3-a09e-a94612496326.png)
+
+![sourceJ030702-120539medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234705380-a43cac03-0593-42ec-9740-e910460ee176.png)
+
+Almost all the radio-bright sources look like this:
+
+![sourceJ030733-163843medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234705458-d0a3cb37-38c6-445d-8073-1b062ea0c15b.png)
+
+That makes sense. It's a black hole with bright jets. I'd guess something like 80% of diffuse sources look like this. But some lobed sources are a bit weird. Like this one that doesn't seem to have a bright center:
+
+![sourceJ031154-164506medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234705599-0504f3b5-ee68-4a6f-8364-fe1c09ac1e90.png)
+
+Some are even offset (a factor of viewing angle):
+
+![sourceJ042907-534919medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234705753-50da6e92-3169-4ced-92af-78ef01466bbb.png)
+
+![sourceJ034041-181026medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234705784-3d33334a-09c7-4f2e-88a8-3c0296e9d4e3.png)
+
+Some even come in pairs:
+
+![sourceJ033846-352238medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234705856-dd9136d8-232f-4ad9-8e35-c6a187b4f100.png)
+
+
 ## Usage and Installation
 
 This project was intended to be expanded into my PhD work during my time at Brown. I ultimetely chose to leave the department, and this project got abandoned with my departure. If you have stumbled on this repository because you think the work may be useful, I reccomend downloading the SMEARS.py with the jupyter notebook titles "Active Work" and going from there. There are a lot of functions that depend on each other and several decisions that need to be made when running this code, and I am fairly responsive over email (my most current email is in my Github bio). Don't hesitiate to reach out if you find yourself here. This code took years of hard work and I care for it very much, I'd be thrilled if someone used it.
