@@ -26,6 +26,12 @@ I mentioned that the data I work with is an output for something called FHD. Thi
 
 ![github1](https://user-images.githubusercontent.com/47015033/234695090-f1e8fb5c-3cf9-44a7-a07a-3d1f97d51345.png) 
 
+The goal is to turn these individual point arrays into something that looks like the sources so we can subtract it from the data and calibrate asound it. I'll talk you through the modeling algorithm next which takes those point arrays and turns them in to a model that looks like this:
+
+![sourceJ004733-251710medianobsradius0 00833334bright0 15falsereturned](https://user-images.githubusercontent.com/47015033/234695634-81f0d1b3-47ab-4f28-b741-24e07ebc3e1d.png)
+
+Wow so pretty. But how did I do it? First we need to consider the observations individualy. 
+
 
 ## Usage
 
