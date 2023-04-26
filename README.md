@@ -24,7 +24,7 @@ Previous work has assumed that these sources are point-like. As I've shown repea
 
 I mentioned that the data I work with is an output for something called FHD. This is the Fast (it is not fast) Holographic (I've spent years trying to get someone to explain to me why this is holographic. No one can.) Deconvolution (it is a deconvolution!). It works by taking an ammount of light from a part of the telscope observation that it decides is a source and sort of pull the light together in to a point source. If you've got a mathy background, the deconvolution algorithm is collapsing the flux into delta functions in an attempt to resolve the source. When this encounters a non-pointlike source, this does not work! FHD spits out an array of these points it has atttempted to collect, each with a corresponding flux. You've read this far so I think you desrve a litttle picture at this point. HEre is an example of what a source looks like when we deconvolve it into points. Each of the colors here is a different observation of the source.
 
-![github1](https://user-images.githubusercontent.com/47015033/234695090-f1e8fb5c-3cf9-44a7-a07a-3d1f97d51345.png)
+![github1](https://user-images.githubusercontent.com/47015033/234695090-f1e8fb5c-3cf9-44a7-a07a-3d1f97d51345.png) 
 
 
 ## Usage
